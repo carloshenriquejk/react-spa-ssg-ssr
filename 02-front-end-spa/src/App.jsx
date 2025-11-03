@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react';
 
+ // A responsabilidade visual é desacoplada para o front-end e as regras de negócio para o back-end.
+ // SPA - Toda interface da aplicação é construída pelo JavaScript durante o tempo de execução
+
+ //É um único carregamento principal e, por isso, a tela não pisca
+
+ //Problema de SEO (indexação): não há tempo de espera para carregar todas as informações.
+
 function App() {
   const [users, setUsers] = useState([]);
 
