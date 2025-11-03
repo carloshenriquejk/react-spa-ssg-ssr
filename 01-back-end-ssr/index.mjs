@@ -11,28 +11,30 @@ app.use(
 app.set('view engine', 'ejs');
 
 app.get('/users', (req, res) => {
-  //buscava dado no banco
-
   const users = [
     {
       id: 1,
-      name: 'Max',
+      name: 'Max almeida',
     },
     {
       id: 2,
-      name: 'Mayke',
+      name: 'Mayke brito',
     },
     {
       id: 3,
-      name: 'Paula',
+      name: 'Paula Fernandes',
     },
   ];
 
-  /* if (req.header('Accept') == 'application/json') {
+  // Check if client wants JSON response
+  if (req.header('Accept') === 'application/json') {
     return res.json({ data: users });
-  }  */
+  }
 
-  return res.json({ data: users });
+  // Render EJS template with users data
+  return res.render('users/list', { users });
 });
 
-app.listen(3333);
+app.listen(3333, () => {
+  console.log('Server running on port 3333');
+});

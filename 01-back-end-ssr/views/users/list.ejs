@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- incluide('../partials/head')%>
-  </head>
-  <body>
-    <main>
-      <ul>
-        
-        <% users.forEach((user)) => { %>
-        <li><%= user.name %></li>
-        <% }); %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+</head>
+<body>
 
-        <li>teste</li>
-      </ul>
-    </main>
-
-    <%- incluide('../partials/footer')%>
-  </body>
+          <ul style="font-size: 30px;">
+              <% users.forEach(user => { %>
+                  <li>
+                      <%= user.name %>
+                  </li>
+              <% }); %>
+          </ul>
+</body>
 </html>

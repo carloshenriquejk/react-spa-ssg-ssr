@@ -16,7 +16,7 @@ function App() {
   });
 
   return (
-    <ul>
+    <ul style={{fontSize: "30px"}}>
       {users.map((user) => {
         return <li key={user.id}>{user.name}</li>;
       })}
