@@ -14,11 +14,11 @@ app.get('/users', (req, res) => {
   const users = [
     {
       id: 1,
-      name: 'Max almeida',
+      name: 'Max Almeida',
     },
     {
       id: 2,
-      name: 'Mayke brito',
+      name: 'Mayke Brito',
     },
     {
       id: 3,
@@ -26,13 +26,12 @@ app.get('/users', (req, res) => {
     },
   ];
 
-  // Check if client wants JSON response
+  //API Rest
   if (req.header('Accept') === 'application/json') {
     return res.json({ data: users });
   }
 
-  // Render EJS template with users data
-  return res.render('users/list', { users });
+  return res.render('users/list');
 });
 
 app.listen(3333, () => {

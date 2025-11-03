@@ -13,14 +13,17 @@ function App() {
       .then((data) => {
         setUsers(data.data);
       });
-  });
+  },[]);
 
   return (
-    <ul style={{fontSize: "30px"}}>
-      {users.map((user) => {
-        return <li key={user.id}>{user.name}</li>;
-      })}
-    </ul>
+    <>
+      <h1>Renderização SPA </h1>
+      <ul style={{ fontSize: "30px" }}>
+        {users.map((user) => {
+          return <li key={user.id}>{user.name}</li>;
+        })}
+      </ul>
+    </>
   );
 }
 

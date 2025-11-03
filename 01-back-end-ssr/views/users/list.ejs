@@ -1,3 +1,19 @@
+  <!-- busca dados diretamente do BD -->
+  
+  <% 
+    const users = [
+      { id: 1, name: 'Max Almeida' },
+      { id: 2, name: 'Mayke Brito' },
+      { id: 3, name: 'Paula Fernandes' },
+    ];
+  %>
+
+<!--
+  Template engines => arquivos HTML que aceitam variáveis
+  Laravel -> Blade
+  Node.js -> EJS
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +22,13 @@
     <title>Users List</title>
 </head>
 <body>
-
-          <ul style="font-size: 30px;">
-              <% users.forEach(user => { %>
-                  <li>
-                      <%= user.name %>
-                  </li>
-              <% }); %>
-          </ul>
+  <h1>Renderização SSR</h1>
+    <ul style="font-size: 30px;">
+         <% users.forEach(user => { %>
+             <li>
+                 <%= user.name %>
+              </li>
+          <% }); %>
+    </ul>
 </body>
 </html>
